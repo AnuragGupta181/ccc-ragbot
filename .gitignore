@@ -9,3 +9,8 @@ wheels/
 # Virtual environments
 .venv
 .env
+
+chroma_langchain_db/
+chromadb/
+db.sqlite3
+chroma.sqlite3
