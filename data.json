@@ -1,0 +1,1771 @@
+{
+  "faqs": [
+    {
+      "question": "What is the Cloud Computing Cell (CCC)?",
+      "answer": "The Cloud Computing Cell (CCC) is the official technical society of the IT Department at Ajay Kumar Garg Engineering College. Established in 2016, CCC focuses on cloud technologies, web development, ML, UI/UX, and hands-on technical skills through events, workshops, and projects.",
+      "tags": [
+        "ccc",
+        "society",
+        "about",
+        "technical-society",
+        "it-dept"
+      ]
+    },
+    {
+      "question": "How can I join the Cloud Computing Cell?",
+      "answer": "Students can join CCC by participating in the annual recruitment drive conducted by the society. The process typically involves a registration form, a technical or creative assessment, and an interview round to evaluate your skills and interest. It will be held in the starting of third semester.",
+      "tags": [
+        "join",
+        "membership",
+        "recruitment",
+        "students"
+      ]
+    },
+    {
+      "question": "Who can be a member of CCC?",
+      "answer": "CCC is open to students from all branches and years who have an interest in technology, cloud computing, web development, machine learning, or design. second-year and second-year students are especially encouraged to apply.",
+      "tags": [
+        "eligibility",
+        "students",
+        "membership",
+        "join"
+      ]
+    },
+    {
+      "question": "What activities does CCC organize?",
+      "answer": "CCC organizes workshops, tech events, hands-on sessions, competitions, and project-based learning programs. Some of the major events include DevClash, Nimbus, TechBuzz, CloudSplore, and React-ion.",
+      "tags": [
+        "events",
+        "workshops",
+        "activities",
+        "ccc-events"
+      ]
+    },
+    {
+      "question": "Who coordinates the Cloud Computing Cell?",
+      "answer": "CCC is coordinated by Mr. Santosh Kumar Mishra and Ms. Shikha Agrawal from the IT Department. They guide students in technical learning, project development, and professional growth.",
+      "tags": [
+        "coordinators",
+        "faculty",
+        "it-dept"
+      ]
+    },
+    {
+      "question": "What domains does CCC focus on?",
+      "answer": "CCC covers multiple technology domains including Web Development, Mobile App Development, UI/UX Design, Cloud Computing, and Machine Learning. Each domain offers practical learning through projects and workshops.",
+      "tags": [
+        "domains",
+        "web",
+        "app",
+        "ui-ux",
+        "cloud",
+        "ml"
+      ]
+    },
+    {
+      "question": "Does CCC provide hands-on learning?",
+      "answer": "Yes, CCC emphasizes practical learning through real-world projects, cloud deployments, workshops, coding tasks, and collaborative team activities. Students work on technologies like GitHub, Python, CloudStack, Docker, and more.",
+      "tags": [
+        "hands-on",
+        "learning",
+        "projects",
+        "practical"
+      ]
+    },
+    {
+      "question": "Is there any fee to join CCC?",
+      "answer": "No, CCC membership is completely free. The society aims to provide skill development opportunities without any financial cost.",
+      "tags": [
+        "fee",
+        "membership",
+        "join",
+        "free"
+      ]
+    },
+    {
+      "question": "Can second-year students join CCC?",
+      "answer": "No, from second-year students are welcome and encouraged to join CCC. Many workshops and events are beginner-friendly and tailored for new students.",
+      "tags": [
+        "second-year",
+        "second-year",
+        "students",
+        "eligibility",
+        "join"
+      ]
+    },
+    {
+      "question": "Where can I find updates about CCC events?",
+      "answer": "You can find all updates on CCC’s official website, social media profiles, or through announcements made by the society during college events.",
+      "tags": [
+        "updates",
+        "events",
+        "announcements",
+        "website"
+      ]
+    }
+  ],
+  "society_info": {
+    "name": "Cloud Computing Cell",
+    "established_year": "2016",
+    "introduction": "The Cloud Computing Cell, the technical society of Ajay Kumar Garg Engineering College, has been active since February 2016. It exposes students to the latest cloud technologies, preparing them for industry and research opportunities. The Cell enables students to compute, manage, and deploy cloud-based solutions while gaining hands-on experience through real-world implementations. It is coordinated by Mr. Santosh Kumar Mishra and Ms. Shikha Agrawal from the IT Department.",
+
+    "about_us": "The Cloud Computing Cell at Ajay Kumar Garg Engineering College, established in February 2016, provides students with exposure to modern cloud technologies, improving their readiness for placements and research. It offers a platform to learn, manage, and deploy cloud services. The Cell is guided by Mr. Santosh Kumar Mishra and Ms. Shikha Agrawal from the IT Department, who mentor students in both academic and professional domains.",
+
+    "who_we_are": "We are a vibrant team of individuals from diverse backgrounds with a shared passion for technology. Our members collaborate to explore and innovate in Web Development, Machine Learning, Cloud Computing, and UI/UX Design. Through teamwork, knowledge sharing, and hands-on projects, we aim to empower every member to grow and achieve their full potential in the rapidly evolving tech landscape.",
+
+    "coordinators": [
+      {
+        "name": "Mr. Santosh Kumar Mishra",
+        "role": "Coordinator",
+        "department": "IT Department"
+      },
+      {
+        "name": "Ms. Shikha Agrawal",
+        "role": "Co-Coordinator",
+        "department": "IT Department"
+      }
+    ]
+  },
+  "domains": [
+      {
+        "domain": "Web Development",
+        "details": "Web development involves building everything from simple static pages to complex web applications interacting with databases and users in real-time. It includes HTML, CSS, JavaScript, and backend frameworks like Node.js, Django, and Ruby on Rails. Web developers design digital experiences that are functional, responsive, and visually appealing.",
+        "tags": [
+          "web-development",
+          "frontend",
+          "backend",
+          "html",
+          "css",
+          "javascript",
+          "web-design",
+          "ccc-domain"
+        ]
+      },
+      {
+        "domain": "Mobile App Development",
+        "details": "Mobile app development focuses on creating applications for iOS and Android devices. Developers build tools, services, games, and interactive applications that allow users to engage on-the-go. With millions of mobile users worldwide, app development is one of the most in-demand and impactful tech skill areas.", "tags": [
+          "mobile-app-development",
+          "android",
+          "ios",
+          "mobile-ui",
+          "mobile-programming",
+          "ccc-domain"
+        ]
+      },
+      {
+        "domain": "UI/UX Design",
+        "details": "UI/UX design focuses on creating visually appealing interfaces and intuitive user experiences. It ensures products are easy to navigate, consistent, accessible, and optimized for user needs. Strong UI/UX design is essential for building impactful and user-friendly digital products.",
+        "tags": [
+          "ui-ux",
+          "design",
+          "user-experience",
+          "user-interface",
+          "visual-design",
+          "interaction-design",
+          "ccc-domain"
+        ]
+      },
+      {
+        "domain": "Cloud Computing",
+        "details": "Cloud computing enables companies to store data and run applications on remote servers rather than on traditional on-site hardware. It provides scalable, cost-effective, and efficient solutions while improving collaboration and flexibility. Cloud technologies also integrate with fields like IoT, Big Data, and AI, forming the backbone of modern computing.",
+        "tags": [
+          "cloud-computing",
+          "iaas",
+          "cloudstack",
+          "virtualization",
+          "devops",
+          "infrastructure",
+          "ccc-domain"
+        ]
+      },
+      {
+        "domain": "Machine Learning",
+        "details": "Machine Learning focuses on building systems that learn from data and make intelligent decisions. It includes concepts such as supervised learning, unsupervised learning, neural networks, and model evaluation. ML is used in real-world applications like recommendation systems, fraud detection, natural language processing, and computer vision. By working on ML projects, students gain hands-on experience in data preprocessing, model training, deployment, and understanding how intelligent systems operate.",
+        "tags": [
+          "machine-learning",
+          "ml",
+          "ai",
+          "neural-networks",
+          "data-science",
+          "model-training",
+          "python",
+          "ccc-domain"
+        ]
+      }
+    ],
+  "faculty": [
+    {
+      "name": "Mr. Santosh Mishra",
+      "department": "IT Department",
+      "email": "NA",
+      "experience": {
+        "teaching_years": 15,
+        "industry_years": 3
+      },
+      "subjects": [
+        "Problem Solving & Programming",
+        "Data Structures",
+        "Information Technology",
+        "Cybersecurity",
+        "Python"
+      ],
+      "skills": ["Java", "C", "C++", "Python", "PHP"],
+      "description": "Gold Faculty Partner at Infosys with 15+ years of teaching and 3 years of industry experience. Skilled in Java, C, C++, Python, PHP.",
+      "tags": [
+        "java", "c", "c++", "python", "php",
+        "pps", "data-structures", "information-technology", "cybersecurity",
+        "assistant-professor", "it-dept", "infosys-gold-partner"
+      ]
+    },
+    {
+      "name": "Ms. Shikha Agrawal",
+      "department": "IT Department",
+      "email": "NA",
+      "experience": {
+        "teaching_years": 15,
+        "industry_years": 3
+      },
+      "subjects": [
+        "Problem Solving & Programming",
+        "Data Structures",
+        "Information Technology",
+        "Cybersecurity",
+        "Python"
+      ],
+      "skills": ["Java", "C", "C++", "Python", "PHP"],
+      "description": "Gold Faculty Partner at Infosys with 15+ years of teaching and 3 years of industry experience. Skilled in Java, C, C++, Python, PHP.",
+      "tags": [
+        "java", "c", "c++", "python", "php",
+        "pps", "data-structures", "information-technology", "cybersecurity",
+        "assistant-professor", "it-dept", "infosys-gold-partner"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "name": "DEVCLASH",
+      "date": "6th December 2024",
+      "date_iso": "2024-12-06",
+      "content": "The Cloud Computing Cell, the technical society under the IT Department, successfully organized DevClash, an event designed exclusively for 2nd-year students to showcase their front-end development skills in web and app development.",
+      "link": "/Devclash",
+      "tags": [
+        "competition",
+        "frontend",
+        "web-development",
+        "app-development",
+        "second-year",
+        "event-2024",
+        "ccc",
+        "it-dept"
+      ]
+    },
+    {
+      "name": "CLOUDSPLORE",
+      "date": "28th & 29th April 2022",
+      "date_iso": "2022-04-28",
+      "content": "The Cloud Computing Cell conducted a workshop from 28th to 29th April 2022 titled CloudSplore. The workshop was conducted under the guidance of Dr. Parneet Kaur and Dr. Abhilasha Singh.",
+      "link": "/ECloud",
+      "tags": [
+        "workshop",
+        "cloud-computing",
+        "event-2022",
+        "ccc",
+        "it-dept"
+      ]
+    },
+    {
+      "name": "REACT-ION",
+      "date": "10th & 11th June 2023",
+      "date_iso": "2023-06-10",
+      "content": "Cloud Computing Cell conducted a hands-on workshop named React-ion, focusing on fundamentals of HTML, CSS, and React frameworks.",
+      "link": "/Ereacticons",
+      "tags": [
+        "workshop",
+        "html",
+        "css",
+        "react",
+        "frontend",
+        "event-2023",
+        "ccc",
+        "it-dept"
+      ]
+    },
+    {
+      "name": "NIMBUS",
+      "date": "24th & 25th May 2024",
+      "date_iso": "2024-05-24",
+      "content": "The Cloud Computing Cell successfully conducted NIMBUS, a hands-on introductory workshop covering Git & GitHub, Cloud Computing, Python Programming, Docker, and Machine Learning.",
+      "link": "/Nimbus",
+      "tags": [
+        "workshop",
+        "git",
+        "github",
+        "cloud-computing",
+        "python",
+        "docker",
+        "machine-learning",
+        "event-2024",
+        "ccc",
+        "it-dept"
+      ]
+    },
+    {
+      "name": "TECHBUZZ",
+      "date": "15th December 2023",
+      "date_iso": "2023-12-15",
+      "content": "The Cloud Computing Cell successfully organized TechBuzz, an insightful event featuring Rohit Negi, a renowned YouTuber, tech enthusiast, and industry expert.",
+      "link": "/Techbuzz",
+      "tags": [
+        "tech-talk",
+        "guest-session",
+        "technology",
+        "industry-expert",
+        "event-2023",
+        "ccc",
+        "it-dept"
+      ]
+    }
+  ],
+  "alumni": [
+    {
+      "profile_id": "arpit",
+      "full_name": "Arpit Malik",
+      "domain": "Machine Learning",
+      "tags": [
+        "machine learning",
+        "ml",
+        "ai",
+        "data science",
+        "model training",
+        "python",
+        "research",
+        "ccc alumni"
+      ],
+      "social": {
+        "github": "https://github.com/Arpit2221",
+        "linkedin": "https://www.linkedin.com/in/arpit-malik-aa836a243",
+        "instagram": null
+      },
+      "graduation_year": "alumni",
+      "status": "alumni",
+      "member_type": "former",
+      "summary": "Machine Learning specialist and former CCC member known for interest in AI, model development, and hands-on ML experimentation."
+    },
+    {
+      "profile_id": "atul",
+      "full_name": "Atul Kumar",
+      "domain": "Web Developer",
+      "tags": [
+        "web development",
+        "frontend",
+        "backend",
+        "javascript",
+        "html",
+        "css",
+        "full stack",
+        "ccc alumni"
+      ],
+      "social": {
+        "github": null,
+        "linkedin": "https://www.linkedin.com/in/atul-kumar-495295222",
+        "instagram": null
+      },
+      "graduation_year": "alumni",
+      "status": "alumni",
+      "member_type": "former",
+      "summary": "Former CCC member with a strong foundation in full-stack web development and modern frontend technologies."
+    },
+    {
+      "profile_id": "devrat",
+      "full_name": "Dev Brat Tripathi",
+      "domain": "Machine Learning",
+      "tags": [
+        "machine learning",
+        "data science",
+        "ai",
+        "python",
+        "deep learning",
+        "research",
+        "model training",
+        "ccc alumni"
+      ],
+      "social": {
+        "github": "https://github.com/Desi-Saitama",
+        "linkedin": "https://www.linkedin.com/in/dev-brat-t-ba2647108/",
+        "instagram": null
+      },
+      "graduation_year": "alumni",
+      "status": "alumni",
+      "member_type": "former",
+      "summary": "Former CCC member passionate about AI and ML research, with active contributions on GitHub."
+    },
+    {
+      "profile_id": "kartik",
+      "full_name": "Kartik Tyagi",
+      "domain": "Web Developer",
+      "tags": [
+        "web development",
+        "html",
+        "css",
+        "javascript",
+        "frontend",
+        "backend",
+        "full stack",
+        "ccc alumni"
+      ],
+      "social": {
+        "github": "https://github.com/KartikAKGEC89",
+        "linkedin": "https://www.linkedin.com/in/kartik-tyagi-a96929205/",
+        "instagram": null
+      },
+      "graduation_year": "alumni",
+      "status": "alumni",
+      "member_type": "former",
+      "summary": "Full-stack web developer and former CCC member with strong GitHub activity."
+    },
+    {
+      "profile_id": "anjani",
+      "full_name": "Priti Kapoor",
+      "domain": "Web Developer",
+      "tags": [
+        "web development",
+        "frontend",
+        "html",
+        "css",
+        "javascript",
+        "react",
+        "ui",
+        "ccc alumni"
+      ],
+      "social": {
+        "github": "https://github.com/Priti2078",
+        "linkedin": "https://www.linkedin.com/in/priti-kapoor-a10b80251/",
+        "instagram": null
+      },
+      "graduation_year": "alumni",
+      "status": "alumni",
+      "member_type": "former",
+      "summary": "Former CCC member focused on frontend engineering and clean UI development."
+    },
+    {
+      "profile_id": "priya",
+      "full_name": "Priya Sharma",
+      "domain": "Web Developer and UI/UX Designer",
+      "tags": [
+        "web development",
+        "ui design",
+        "ux design",
+        "frontend",
+        "javascript",
+        "css",
+        "prototyping",
+        "ccc alumni"
+      ],
+      "social": {
+        "github": null,
+        "linkedin": "https://www.linkedin.com/in/priya-sharma-328a8a225",
+        "instagram": null
+      },
+      "graduation_year": "alumni",
+      "status": "alumni",
+      "member_type": "former",
+      "summary": "Former CCC member blending frontend engineering with UI/UX design for aesthetically refined web interfaces."
+    },
+    {
+      "profile_id": "raghav",
+      "full_name": "Raghav Aggarwal",
+      "domain": "App Developer",
+      "tags": [
+        "app development",
+        "android",
+        "mobile apps",
+        "ui design",
+        "java",
+        "kotlin",
+        "software development",
+        "ccc alumni"
+      ],
+      "social": {
+        "github": null,
+        "linkedin": "https://www.linkedin.com/in/raghav-aggarwal-up19",
+        "instagram": null
+      },
+      "graduation_year": "alumni",
+      "status": "alumni",
+      "member_type": "former",
+      "summary": "Former CCC member passionate about mobile app development and clean UI workflows."
+    },
+    {
+      "profile_id": "rishabh",
+      "full_name": "Rishabh Gupta",
+      "domain": "Web Developer",
+      "tags": [
+        "web development",
+        "frontend",
+        "html",
+        "css",
+        "javascript",
+        "react",
+        "node",
+        "ccc alumni"
+      ],
+      "social": {
+        "github": null,
+        "linkedin": "https://www.linkedin.com/in/rishabh-gupta-863968244",
+        "instagram": null
+      },
+      "graduation_year": "alumni",
+      "status": "alumni",
+      "member_type": "former",
+      "summary": "Web developer and former CCC member with experience in modern web technologies."
+    },
+    {
+      "profile_id": "sarthak",
+      "full_name": "Sarthak Srivastava",
+      "domain": "Web Developer",
+      "tags": [
+        "web development",
+        "html",
+        "css",
+        "javascript",
+        "frontend",
+        "react",
+        "full stack",
+        "ccc alumni"
+      ],
+      "social": {
+        "github": "https://github.com/Sarthaksri4",
+        "linkedin": "https://www.linkedin.com/in/sarthak-srivastava-0114a8230",
+        "instagram": null
+      },
+      "graduation_year": "alumni",
+      "status": "alumni",
+      "member_type": "former",
+      "summary": "Former CCC member with contributions in frontend and full-stack development."
+    },
+    {
+      "profile_id": "saurabh",
+      "full_name": "Saurabh",
+      "domain": "Web Developer",
+      "tags": [
+        "web development",
+        "frontend",
+        "backend",
+        "javascript",
+        "html",
+        "css",
+        "node",
+        "ccc alumni"
+      ],
+      "social": {
+        "github": "https://github.com/Saurabhrajput1234",
+        "linkedin": "https://www.linkedin.com/in/saurabh-rajput-135587232/",
+        "instagram": null
+      },
+      "graduation_year": "alumni",
+      "status": "alumni",
+      "member_type": "former",
+      "summary": "Full-stack web developer and former CCC member with strong backend and frontend foundations."
+    },
+    {
+      "profile_id": "shrasti",
+      "full_name": "Shrasti Yadav",
+      "domain": "Web Developer and UI/UX Designer",
+      "tags": [
+        "ui design",
+        "ux design",
+        "frontend",
+        "html",
+        "css",
+        "javascript",
+        "prototyping",
+        "ccc alumni"
+      ],
+      "social": {
+        "github": null,
+        "linkedin": "https://www.linkedin.com/in/shrasti-yadav-9216bb205",
+        "instagram": null
+      },
+      "graduation_year": "alumni",
+      "status": "alumni",
+      "member_type": "former",
+      "summary": "Former CCC member skilled in UI/UX design and frontend development."
+    },
+    {
+      "profile_id": "sonam",
+      "full_name": "Sonam Kumari",
+      "domain": "Web Developer",
+      "tags": [
+        "web development",
+        "frontend",
+        "react",
+        "javascript",
+        "css",
+        "html",
+        "ui",
+        "ccc alumni"
+      ],
+      "social": {
+        "github": "https://github.com/sonamakgec",
+        "linkedin": "https://www.linkedin.com/in/sonamkumari27",
+        "instagram": null
+      },
+      "graduation_year": "alumni",
+      "status": "alumni",
+      "member_type": "former",
+      "summary": "Frontend-focused web developer and former CCC member with a strong GitHub presence."
+    },
+    {
+      "profile_id": "taru",
+      "full_name": "Taru Pathak",
+      "domain": "Web Developer and UI/UX Designer",
+      "tags": [
+        "web development",
+        "ui design",
+        "ux design",
+        "frontend",
+        "javascript",
+        "css",
+        "prototyping",
+        "ccc alumni"
+      ],
+      "social": {
+        "github": "https://github.com/tarupathak",
+        "linkedin": "https://www.linkedin.com/in/taru-pathak-747660247/",
+        "instagram": null
+      },
+      "graduation_year": "alumni",
+      "status": "alumni",
+      "member_type": "former",
+      "summary": "Former CCC member combining UI/UX creativity with robust web development skills."
+    }
+  ],
+  "fourth_year_members": [
+    {
+      "profile_id": "adityaKumar",
+      "full_name": "Aditya Kumar",
+      "domain": "Web Developer",
+      "tags": [
+        "web development",
+        "frontend",
+        "html",
+        "css",
+        "javascript",
+        "react",
+        "design",
+        "ui",
+        "software development"
+      ],
+      "social": {
+        "github": "https://github.com/aditya-Kumar421",
+        "linkedin": "https://www.linkedin.com/in/aditya-kumar421",
+        "instagram": null
+      },
+      "graduation_year": "4th year",
+      "status": "active",
+      "member_type": "current",
+      "summary": "Fourth-year web developer focusing on frontend technologies and modern web practices, actively contributing within CCC."
+    },
+
+    {
+      "profile_id": "akhandSingh2",
+      "full_name": "Akhand Pratap Singh",
+      "domain": "Web Developer",
+      "tags": [
+        "web development",
+        "frontend",
+        "javascript",
+        "css",
+        "html",
+        "ui",
+        "react",
+        "software engineering",
+        "modern web"
+      ],
+      "social": {
+        "github": "https://github.com/akhand2210093",
+        "linkedin": "https://www.linkedin.com/in/akhand01",
+        "instagram": "https://www.instagram.com/akhand.__?igsh=N2dkaDZicTc2azZz"
+      },
+      "graduation_year": "4th year",
+      "status": "active",
+      "member_type": "current",
+      "summary": "Active fourth-year web developer with strong interests in frontend development and modern UI practices."
+    },
+
+    {
+      "profile_id": "akshatSingh",
+      "full_name": "Akshat Singh",
+      "domain": "App Developer",
+      "tags": [
+        "app development",
+        "android",
+        "mobile development",
+        "java",
+        "kotlin",
+        "ui design",
+        "software engineering",
+        "mobile apps",
+        "full stack mobile"
+      ],
+      "social": {
+        "github": "https://github.com/7singhakshat",
+        "linkedin": "https://www.linkedin.com/in/akshat-singh-77069b293",
+        "instagram": null
+      },
+      "graduation_year": "4th year",
+      "status": "active",
+      "member_type": "current",
+      "summary": "Fourth-year app developer specializing in Android development, mobile UI, and performance-driven app builds."
+    },
+
+    {
+      "profile_id": "arpitaAsthana",
+      "full_name": "Arpita Asthana",
+      "domain": "Web Developer",
+      "tags": [
+        "web development",
+        "frontend",
+        "css",
+        "html",
+        "javascript",
+        "ui design",
+        "web design",
+        "responsive design"
+      ],
+      "social": {
+        "github": "https://github.com/arpitaasth0",
+        "linkedin": "https://www.linkedin.com/in/arpita-asthana-031077333",
+        "instagram": "https://www.instagram.com/_arpita_asthana_?igsh=cmRmaDQ5M3Y0b2hh"
+      },
+      "graduation_year": "4th year",
+      "status": "active",
+      "member_type": "current",
+      "summary": "Frontend-focused fourth-year web developer known for clean UI and strong design sense."
+    },
+
+    {
+      "profile_id": "Diya",
+      "full_name": "Diya Sirohi",
+      "domain": "Cloud Developer",
+      "tags": [
+        "cloud computing",
+        "cloud developer",
+        "aws",
+        "gcp",
+        "devops",
+        "backend",
+        "infrastructure",
+        "distributed systems"
+      ],
+      "social": {
+        "github": "https://github.com/DiyaSirohi44",
+        "linkedin": "https://www.linkedin.com/in/diya-sirohi-206a01272",
+        "instagram": null
+      },
+      "graduation_year": "4th year",
+      "status": "active",
+      "member_type": "current",
+      "summary": "Fourth-year cloud developer exploring cloud-native tools, distributed systems, and scalable backend architectures."
+    },
+
+    {
+      "profile_id": "harshSingh2",
+      "full_name": "Harsh Singh",
+      "domain": "App Developer",
+      "tags": [
+        "mobile development",
+        "android",
+        "kotlin",
+        "java",
+        "ui",
+        "ux",
+        "software engineering",
+        "app optimization"
+      ],
+      "social": {
+        "github": "https://github.com/harshans22",
+        "linkedin": "https://www.linkedin.com/in/harsh-singh-639316291",
+        "instagram": null
+      },
+      "graduation_year": "4th year",
+      "status": "active",
+      "member_type": "current",
+      "summary": "Mobile app developer skilled in Android development and UI-focused mobile experiences."
+    },
+
+    {
+      "profile_id": "kratikaGupta",
+      "full_name": "Kratika Gupta",
+      "domain": "Web Developer",
+      "tags": [
+        "web development",
+        "frontend",
+        "html",
+        "css",
+        "javascript",
+        "react",
+        "ui design",
+        "responsive design",
+        "web engineering"
+      ],
+      "social": {
+        "github": "https://github.com/kratika182004",
+        "linkedin": "https://www.linkedin.com/in/kratika-gupta-043829293",
+        "instagram": "https://www.instagram.com/kratika1081?igsh=a2l5bGJzNGY1YThj"
+      },
+      "graduation_year": "4th year",
+      "status": "active",
+      "member_type": "current",
+      "summary": "Frontend developer with a strong grasp of responsive design and modern web tools."
+    },
+
+    {
+      "profile_id": "kritika",
+      "full_name": "Kritika Agrawal",
+      "domain": "Machine Learning",
+      "tags": [
+        "machine learning",
+        "data science",
+        "python",
+        "ai",
+        "model training",
+        "research",
+        "deep learning",
+        "analytics",
+        "ml engineering"
+      ],
+      "social": {
+        "github": "https://github.com/kritikaagr0409/",
+        "linkedin": "https://www.linkedin.com/in/kritikaagrawal910",
+        "instagram": null
+      },
+      "graduation_year": "4th year",
+      "status": "active",
+      "member_type": "current",
+      "summary": "Fourth-year ML practitioner passionate about deep learning, analytics, and AI-driven research."
+    },
+
+    {
+      "profile_id": "manoj",
+      "full_name": "Manoj Samanta",
+      "domain": "UI/UX Designer",
+      "tags": [
+        "ui design",
+        "ux design",
+        "prototyping",
+        "figma",
+        "design systems",
+        "wireframing",
+        "interaction design",
+        "visual design"
+      ],
+      "social": {
+        "github": "https://github.com/TECHNXX",
+        "linkedin": "https://www.linkedin.com/in/manoj-samanta",
+        "instagram": "https://www.instagram.com/erudi.tex?igsh=d2N2NXU4dmNiODFy"
+      },
+      "graduation_year": "4th year",
+      "status": "active",
+      "member_type": "current",
+      "summary": "UI/UX designer with a strong foundation in modern design principles and interactive prototyping."
+    },
+
+    {
+      "profile_id": "prakharSrivastava",
+      "full_name": "Prakhar Srivastava",
+      "domain": "App Developer",
+      "tags": [
+        "android development",
+        "mobile apps",
+        "java",
+        "kotlin",
+        "ui design",
+        "backend integration",
+        "software engineering",
+        "mobile ui"
+      ],
+      "social": {
+        "github": "https://github.com/prakharAKGa",
+        "linkedin": "https://www.linkedin.com/in/prakharsrivastava1007",
+        "instagram": null
+      },
+      "graduation_year": "4th year",
+      "status": "active",
+      "member_type": "current",
+      "summary": "Fourth-year Android developer with strong backend integration and UI development skills."
+    },
+
+    {
+      "profile_id": "sachendraGangwar2",
+      "full_name": "Sachendra Gangwar",
+      "domain": "Web Developer",
+      "tags": [
+        "web development",
+        "html",
+        "css",
+        "javascript",
+        "frontend",
+        "react",
+        "responsive design",
+        "clean ui"
+      ],
+      "social": {
+        "github": "https://github.com/Sachendra79",
+        "linkedin": "https://www.linkedin.com/in/sachendra-gangwar-49904b296",
+        "instagram": "https://www.instagram.com/sachendra_79?igsh=cG5oaWlnZTBjNzRl"
+      },
+      "graduation_year": "4th year",
+      "status": "active",
+      "member_type": "current",
+      "summary": "Frontend web developer known for clean UI structures and responsive design."
+    },
+
+    {
+      "profile_id": "sahil2",
+      "full_name": "Sahil Tomar",
+      "domain": "Machine Learning",
+      "tags": [
+        "machine learning",
+        "deep learning",
+        "python",
+        "ai",
+        "model training",
+        "analytics",
+        "data science",
+        "research"
+      ],
+      "social": {
+        "github": "https://github.com/dev-S-t",
+        "linkedin": "https://www.linkedin.com/in/dev-s-t",
+        "instagram": "https://www.instagram.com/derek_k.l.i?igsh=a3IzdnV6aTk2aThl"
+      },
+      "graduation_year": "4th year",
+      "status": "active",
+      "member_type": "current",
+      "summary": "Machine learning enthusiast working on deep learning models and AI-driven analysis."
+    },
+
+    {
+      "profile_id": "shreeyaAggarwal",
+      "full_name": "Shreeya Agarwal",
+      "domain": "Machine Learning",
+      "tags": [
+        "machine learning",
+        "python",
+        "data science",
+        "analytics",
+        "research",
+        "ai",
+        "model building",
+        "deep learning"
+      ],
+      "social": {
+        "github": "https://github.com/ShreeyaA11",
+        "linkedin": "https://www.linkedin.com/in/shreeya-agarwal-50697a268",
+        "instagram": null
+      },
+      "graduation_year": "4th year",
+      "status": "active",
+      "member_type": "current",
+      "summary": "Fourth-year ML developer with strengths in data analysis, research, and model development."
+    },
+
+    {
+      "profile_id": "shreyaMohan",
+      "full_name": "Shreya Mohan",
+      "domain": "Cloud Developer",
+      "tags": [
+        "cloud development",
+        "aws",
+        "gcp",
+        "cloud computing",
+        "devops",
+        "infrastructure",
+        "backend",
+        "scalable systems"
+      ],
+      "social": {
+        "github": "https://github.com/Shreyamohan101",
+        "linkedin": "https://www.linkedin.com/in/shreya-mohan-b6a369287",
+        "instagram": null
+      },
+      "graduation_year": "4th year",
+      "status": "active",
+      "member_type": "current",
+      "summary": "Cloud developer interested in scalable systems, distributed architectures, and automation workflows."
+    },
+
+    {
+      "profile_id": "yashMishra",
+      "full_name": "Yash Mishra",
+      "domain": "Web Developer",
+      "tags": [
+        "web development",
+        "javascript",
+        "frontend",
+        "react",
+        "html",
+        "css",
+        "responsive design",
+        "ui"
+      ],
+      "social": {
+        "github": "https://github.com/yash-mishra150",
+        "linkedin": "https://www.linkedin.com/in/yash-mishra-87b29725b",
+        "instagram": "https://www.instagram.com/yash_mishra150?igsh=YWx4bHBjb2p2cDM="
+      },
+      "graduation_year": "4th year",
+      "status": "active",
+      "member_type": "current",
+      "summary": "Fourth-year frontend web developer skilled in React and modern web frameworks."
+    }
+  ],
+  "third_year_members": [
+    {
+      "profile_id": "akshat",
+      "full_name": "Akshat",
+      "domain": "Machine Learning",
+      "tags": [
+        "machine learning",
+        "data science",
+        "python",
+        "ai",
+        "ml engineering",
+        "model training",
+        "analytics",
+        "deep learning",
+        "research"
+      ],
+      "social": {
+        "github": "https://github.com/B4K2",
+        "linkedin": "https://www.linkedin.com/in/akshat-balyan-886947293/",
+        "instagram": null
+      },
+      "graduation_year": "3rd year",
+      "status": "active",
+      "member_type": "current",
+      "summary": "Third-year machine learning enthusiast exploring AI, model training, and data-driven applications."
+    },
+
+    {
+      "profile_id": "aditya",
+      "full_name": "Aditya Srivastava",
+      "domain": "Web Developer",
+      "tags": [
+        "web development",
+        "frontend",
+        "javascript",
+        "html",
+        "css",
+        "react",
+        "responsive design",
+        "ui",
+        "software engineering"
+      ],
+      "social": {
+        "github": "https://github.com/adityasriv2317",
+        "linkedin": "https://www.linkedin.com/in/aditya2317/",
+        "instagram": "https://www.instagram.com/shikhar_2317?igsh=MTRkcDFzaDV0ZHduMg=="
+      },
+      "graduation_year": "3rd year",
+      "status": "active",
+      "member_type": "current",
+      "summary": "Third-year web developer focusing on frontend technologies, UI design, and modern JavaScript ecosystems."
+    },
+
+    {
+      "profile_id": "akshita",
+      "full_name": "Akshita Saini",
+      "domain": "Web Developer",
+      "tags": [
+        "web development",
+        "frontend",
+        "javascript",
+        "html",
+        "css",
+        "react",
+        "ui design",
+        "web design",
+        "responsive development"
+      ],
+      "social": {
+        "github": "https://github.com/CodeWithAkshi",
+        "linkedin": "https://www.linkedin.com/in/akshita2k4/",
+        "instagram": "https://www.instagram.com/akshiii_138?igsh=MWJsMjM2YWpwcWYxeQ=="
+      },
+      "graduation_year": "3rd year",
+      "status": "active",
+      "member_type": "current",
+      "summary": "Frontend developer passionate about creating responsive interfaces and clean, accessible designs."
+    },
+
+    {
+      "profile_id": "alok",
+      "full_name": "Alok Kumar Yadav",
+      "domain": "App Developer",
+      "tags": [
+        "app development",
+        "android",
+        "kotlin",
+        "java",
+        "mobile ui",
+        "software engineering",
+        "ui",
+        "android apps",
+        "mobile dev"
+      ],
+      "social": {
+        "github": "https://github.com/alokyadav686",
+        "linkedin": "https://www.linkedin.com/in/alok-kumar-yadav-329a61302/",
+        "instagram": null
+      },
+      "graduation_year": "3rd year",
+      "status": "active",
+      "member_type": "current",
+      "summary": "Android app developer focusing on clean UI, functional app design, and scalable mobile architecture."
+    },
+
+    {
+      "profile_id": "ayush",
+      "full_name": "Ayush Singh",
+      "domain": "Web Developer",
+      "tags": [
+        "web development",
+        "frontend",
+        "css",
+        "html",
+        "javascript",
+        "react",
+        "ui",
+        "responsive design",
+        "modern web"
+      ],
+      "social": {
+        "github": "https://github.com/AyushInKC",
+        "linkedin": "https://www.linkedin.com/in/ayush-singh-b504b226b",
+        "instagram": "https://www.instagram.com/thakur__ayush_27?igsh=czZieWNzMXFxMjd5"
+      },
+      "graduation_year": "3rd year",
+      "status": "active",
+      "member_type": "current",
+      "summary": "Active third-year frontend developer with a strong interest in modern UI structures and responsive development."
+    },
+
+    {
+      "profile_id": "harshit",
+      "full_name": "Harshit Gautam",
+      "domain": "App Developer",
+      "tags": [
+        "android development",
+        "app development",
+        "java",
+        "kotlin",
+        "mobile apps",
+        "ui design",
+        "software development",
+        "android ui"
+      ],
+      "social": {
+        "github": "https://github.com/harshit2313109",
+        "linkedin": "http://www.linkedin.com/in/harshit-gautam-1b609627a",
+        "instagram": null
+      },
+      "graduation_year": "3rd year",
+      "status": "active",
+      "member_type": "current",
+      "summary": "Third-year developer focused on Android applications and consistent UI-driven mobile experiences."
+    },
+
+    {
+      "profile_id": "jhanvi",
+      "full_name": "Jhanvi Awasthi",
+      "domain": "Web Developer",
+      "tags": [
+        "web development",
+        "frontend",
+        "javascript",
+        "html",
+        "css",
+        "react",
+        "ui",
+        "frontend engineering",
+        "responsive ui"
+      ],
+      "social": {
+        "github": "https://github.com/Jhanviawasthi03",
+        "linkedin": "https://www.linkedin.com/in/jhanvi-awasthi-357008342",
+        "instagram": null
+      },
+      "graduation_year": "3rd year",
+      "status": "active",
+      "member_type": "current",
+      "summary": "Third-year web developer focusing on frontend development and creating responsive, aesthetic interfaces."
+    },
+
+    {
+      "profile_id": "samit",
+      "full_name": "Samit Srivastava",
+      "domain": "Web Developer",
+      "tags": [
+        "web development",
+        "frontend",
+        "html",
+        "css",
+        "javascript",
+        "react",
+        "ui",
+        "responsive frontend",
+        "modern web"
+      ],
+      "social": {
+        "github": "https://github.com/samit18",
+        "linkedin": "https://www.linkedin.com/in/samit-srivastava-a4a219295",
+        "instagram": "https://www.instagram.com/samitsrivastava1"
+      },
+      "graduation_year": "3rd year",
+      "status": "active",
+      "member_type": "current",
+      "summary": "Frontend-focused web developer skilled in modern UI layouts and interactive user experiences."
+    },
+
+    {
+      "profile_id": "saurabh",
+      "full_name": "Saurabh Srivastav",
+      "domain": "Web Developer",
+      "tags": [
+        "web development",
+        "frontend",
+        "javascript",
+        "html",
+        "css",
+        "react",
+        "ui",
+        "web design",
+        "modern javascript"
+      ],
+      "social": {
+        "github": "https://github.com/Saurabh12325",
+        "linkedin": "https://www.linkedin.com/in/saurabh-srivastav-ab7712285/",
+        "instagram": "https://www.instagram.com/its_saurabh_srivastav55"
+      },
+      "graduation_year": "3rd year",
+      "status": "active",
+      "member_type": "current",
+      "summary": "Passionate third-year frontend developer with interest in UI-focused web engineering."
+    },
+
+    {
+      "profile_id": "shivam",
+      "full_name": "Shivam Sharma",
+      "domain": "Web Developer",
+      "tags": [
+        "web development",
+        "frontend",
+        "react",
+        "javascript",
+        "html",
+        "css",
+        "ui development",
+        "responsive ui",
+        "modern web tools"
+      ],
+      "social": {
+        "github": "https://github.com/Student-shivamsharma",
+        "linkedin": "https://www.linkedin.com/in/shivam-sharma-450178302",
+        "instagram": "https://www.instagram.com/shivamsharma6842?igsh=dGhpaTIwZ3BvMjZq"
+      },
+      "graduation_year": "3rd year",
+      "status": "active",
+      "member_type": "current",
+      "summary": "React-focused web developer passionate about clean UI and building responsive layouts."
+    },
+
+    {
+      "profile_id": "shruti",
+      "full_name": "Shruti Maurya",
+      "domain": "Web Developer",
+      "tags": [
+        "web development",
+        "frontend",
+        "javascript",
+        "react",
+        "html",
+        "css",
+        "ui",
+        "responsive development",
+        "frontend engineering"
+      ],
+      "social": {
+        "github": "https://github.com/shrutis44",
+        "linkedin": "https://www.linkedin.com/in/shruti-maurya-90a9642a1",
+        "instagram": null
+      },
+      "graduation_year": "3rd year",
+      "status": "active",
+      "member_type": "current",
+      "summary": "Third-year frontend web developer working on building clean, responsive user interfaces."
+    },
+
+    {
+      "profile_id": "tushar",
+      "full_name": "Tushar Sharma",
+      "domain": "UI/UX Designer",
+      "tags": [
+        "ui design",
+        "ux design",
+        "design systems",
+        "prototyping",
+        "figma",
+        "wireframing",
+        "interaction design",
+        "visual design"
+      ],
+      "social": {
+        "github": "https://github.com/tushar4758",
+        "linkedin": "https://www.linkedin.com/in/tushar4758",
+        "instagram": null
+      },
+      "graduation_year": "3rd year",
+      "status": "active",
+      "member_type": "current",
+      "summary": "UI/UX designer specializing in interface layouts, interactive prototypes, and aesthetic design principles."
+    },
+
+    {
+      "profile_id": "utkarsh",
+      "full_name": "Utkarsh Tiwari",
+      "domain": "UI/UX Designer",
+      "tags": [
+        "ui design",
+        "ux design",
+        "visual design",
+        "prototyping",
+        "figma",
+        "interaction design",
+        "layouts",
+        "creative design"
+      ],
+      "social": {
+        "github": "https://github.com/cosmickdd",
+        "linkedin": "https://www.linkedin.com/in/cosmickdd/",
+        "instagram": null
+      },
+      "graduation_year": "3rd year",
+      "status": "active",
+      "member_type": "current",
+      "summary": "Creative UI/UX designer focused on interaction design, visual harmony, and polished user experiences."
+    }
+  ],
+  "second_year_members": [
+    {
+      "profile_id": "keshavkumar",
+      "full_name": "Keshav Kumar",
+      "domain": "Designer",
+      "tags": [
+        "ui design",
+        "ux design",
+        "figma",
+        "visual design",
+        "wireframing",
+        "interaction design",
+        "branding",
+        "creative design",
+        "product design"
+      ],
+      "social": {
+        "github": "https://github.com/keshav1818",
+        "linkedin": "linkedin.com/in/keshav-kumar-a861a6380",
+        "instagram": null
+      },
+      "graduation_year": "2nd year",
+      "status": "active",
+      "member_type": "member",
+      "summary": "second-year UI/UX designer working with Figma and focused on layout, visual design, and digital creativity."
+    },
+
+    {
+      "profile_id": "sanjana",
+      "full_name": "Sanjana",
+      "domain": "Designer",
+      "tags": [
+        "ui design",
+        "ux design",
+        "figma",
+        "visual design",
+        "prototyping",
+        "interaction design",
+        "typography",
+        "color theory",
+        "digital design"
+      ],
+      "social": {
+        "github": "https://github.com/sanjana20255",
+        "linkedin": "www.linkedin.com/in/sanjana-1307a4399",
+        "instagram": "https://www.instagram.com/sanaaa_195"
+      },
+      "graduation_year": "2nd year",
+      "status": "active",
+      "member_type": "member",
+      "summary": "Creative designer specializing in Figma, UI layouts, and building clean visual interfaces."
+    },
+
+    {
+      "profile_id": "satyamagrawal",
+      "full_name": "Satyam Agrawal",
+      "domain": "Designer",
+      "tags": [
+        "ui design",
+        "ux design",
+        "figma",
+        "prototyping",
+        "visual design",
+        "branding",
+        "wireframes",
+        "layout design",
+        "interaction design"
+      ],
+      "social": {
+        "github": "https://github.com/Satyam2291",
+        "linkedin": "https://www.linkedin.com/in/satyam-agrawal-007557316",
+        "instagram": "https://www.instagram.com/satyam97907"
+      },
+      "graduation_year": "2nd year",
+      "status": "active",
+      "member_type": "member",
+      "summary": "second-year UI/UX designer with a strong focus on visual polish and structured interface systems."
+    },
+
+    {
+      "profile_id": "suhanidubey",
+      "full_name": "Suhani Dubey",
+      "domain": "Designer",
+      "tags": [
+        "ui design",
+        "ux design",
+        "prototyping",
+        "figma",
+        "visual design",
+        "creative design",
+        "wireframing",
+        "design thinking",
+        "interface design"
+      ],
+      "social": {
+        "github": "https://github.com/suhani888",
+        "linkedin": "https://www.linkedin.com/in/suhani-dubey-29694731b",
+        "instagram": "https://www.instagram.com/suhanidubey632"
+      },
+      "graduation_year": "2nd year",
+      "status": "active",
+      "member_type": "member",
+      "summary": "UI/UX designer passionate about clean visuals, interactive prototypes, and user-centered design."
+    },
+
+    {
+      "profile_id": "sarthak",
+      "full_name": "Sarthak",
+      "domain": "Frontend Developer",
+      "tags": [
+        "frontend development",
+        "react",
+        "next.js",
+        "javascript",
+        "html",
+        "css",
+        "ui",
+        "responsive design",
+        "modern web"
+      ],
+      "social": {
+        "github": "https://github.com/sarthakkaushik927",
+        "linkedin": "https://www.linkedin.com/in/sarthak-sharma-323652318",
+        "instagram": "https://www.instagram.com/sarthak_sharma_sk"
+      },
+      "graduation_year": "2nd year",
+      "status": "active",
+      "member_type": "member",
+      "summary": "Frontend developer skilled in React, Next.js, and creating responsive UI components."
+    },
+
+    {
+      "profile_id": "shauryaverma",
+      "full_name": "Shaurya Verma",
+      "domain": "Frontend Developer",
+      "tags": [
+        "frontend development",
+        "react",
+        "next.js",
+        "javascript",
+        "css",
+        "html",
+        "ui components",
+        "responsive ui",
+        "modern javascript"
+      ],
+      "social": {
+        "github": "https://github.com/i-shaurya1912",
+        "linkedin": "https://www.linkedin.com/in/shaurya-verma-b76493330",
+        "instagram": "https://www.instagram.com/i.shauryaverma"
+      },
+      "graduation_year": "2nd year",
+      "status": "active",
+      "member_type": "member",
+      "summary": "second-year frontend developer creating UI components and user-centric layouts using React and Next.js."
+    },
+
+    {
+      "profile_id": "krish",
+      "full_name": "Krish",
+      "domain": "Backend Developer",
+      "tags": [
+        "backend development",
+        "node.js",
+        "express",
+        "api development",
+        "javascript",
+        "server-side development",
+        "databases",
+        "rest apis",
+        "backend engineering"
+      ],
+      "social": {
+        "github": "https://github.com/codeWithkrish123",
+        "linkedin": "https://www.linkedin.com/in/krish-sah-b6346732a",
+        "instagram": "https://www.instagram.com/Says.krish"
+      },
+      "graduation_year": "2nd year",
+      "status": "active",
+      "member_type": "member",
+      "summary": "Backend developer focusing on Node.js, APIs, and building efficient server-side systems."
+    },
+
+    {
+      "profile_id": "lovevarshney",
+      "full_name": "Love Varshney",
+      "domain": "Backend Developer",
+      "tags": [
+        "backend development",
+        "node.js",
+        "express",
+        "api development",
+        "javascript",
+        "databases",
+        "server architecture",
+        "rest",
+        "backend engineering"
+      ],
+      "social": {
+        "github": "https://github.com/lovevarshney2007",
+        "linkedin": "https://www.linkedin.com/in/love-varshney-195b21342",
+        "instagram": "https://www.instagram.com/love_varshney_lv"
+      },
+      "graduation_year": "2nd year",
+      "status": "active",
+      "member_type": "member",
+      "summary": "Node.js backend developer specializing in APIs, server architecture, and backend performance."
+    },
+
+    {
+      "profile_id": "manassharma",
+      "full_name": "Manas Sharma",
+      "domain": "Backend Developer",
+      "tags": [
+        "backend development",
+        "spring boot",
+        "java",
+        "api development",
+        "server engineering",
+        "software backend",
+        "database integration",
+        "microservices"
+      ],
+      "social": {
+        "github": null,
+        "linkedin": null,
+        "instagram": null
+      },
+      "graduation_year": "2nd year",
+      "status": "active",
+      "member_type": "member",
+      "summary": "Backend developer focusing on Spring Boot and scalable backend systems using Java."
+    },
+
+    {
+      "profile_id": "arpantiwari",
+      "full_name": "Arpan Tiwari",
+      "domain": "Backend Developer",
+      "tags": [
+        "backend development",
+        "spring boot",
+        "java",
+        "api development",
+        "backend systems",
+        "software engineering",
+        "databases",
+        "microservices"
+      ],
+      "social": {
+        "github": "https://github.com/Tiwari-Arpan",
+        "linkedin": "https://www.linkedin.com/in/arpan-tiwari-69bb40328",
+        "instagram": "https://www.instagram.com/at.is.here"
+      },
+      "graduation_year": "2nd year",
+      "status": "active",
+      "member_type": "member",
+      "summary": "Java and Spring Boot backend developer working on APIs and scalable backend architecture."
+    },
+
+    {
+      "profile_id": "shubhampandey",
+      "full_name": "Subham Pandey",
+      "domain": "App Developer",
+      "tags": [
+        "flutter",
+        "dart",
+        "app development",
+        "mobile ui",
+        "cross-platform apps",
+        "software engineering",
+        "android",
+        "ios",
+        "mobile development"
+      ],
+      "social": {
+        "github": "https://github.com/shubham-pandey",
+        "linkedin": "https://www.linkedin.com/in/the-shubham-pandey",
+        "instagram": "https://www.instagram.com/the.shubham.pandey"
+      },
+      "graduation_year": "2nd year",
+      "status": "active",
+      "member_type": "member",
+      "summary": "Flutter app developer building cross-platform mobile applications with smooth UI experiences."
+    },
+
+    {
+      "profile_id": "aryansingh",
+      "full_name": "Aryan Singh",
+      "domain": "Cloud Developer",
+      "tags": [
+        "cloud computing",
+        "aws",
+        "devops",
+        "infrastructure",
+        "cloud architecture",
+        "scalable systems",
+        "backend",
+        "automation",
+        "distributed systems"
+      ],
+      "social": {
+        "github": "https://github.com/asvs6634-design",
+        "linkedin": "https://www.linkedin.com/in/aryan-singh-a45b4037a",
+        "instagram": "https://www.instagram.com/aryansingh_1117"
+      },
+      "graduation_year": "2nd year",
+      "status": "active",
+      "member_type": "member",
+      "summary": "Cloud developer exploring AWS, cloud-native architectures, and scalable infrastructure solutions."
+    },
+
+    {
+      "profile_id": "vaishnavikrishnan",
+      "full_name": "Vaishnavi Krishnan",
+      "domain": "Cloud Developer",
+      "tags": [
+        "cloud computing",
+        "aws",
+        "devops",
+        "infrastructure",
+        "automation",
+        "cloud engineering",
+        "scalable backend",
+        "distributed systems"
+      ],
+      "social": {
+        "github": "https://github.com/vaikri5020",
+        "linkedin": "https://www.linkedin.com/in/vaishnavi-krishnan-918587321",
+        "instagram": "https://www.instagram.com/superinovani"
+      },
+      "graduation_year": "2nd year",
+      "status": "active",
+      "member_type": "member",
+      "summary": "AWS-focused cloud developer interested in distributed systems and backend automation."
+    },
+
+    {
+      "profile_id": "ayushpratap",
+      "full_name": "Ayush Pratap",
+      "domain": "ML Developer",
+      "tags": [
+        "machine learning",
+        "python",
+        "ai",
+        "ml engineering",
+        "model training",
+        "analytics",
+        "data science",
+        "deep learning"
+      ],
+      "social": {
+        "github": "https://github.com/Ayush9236",
+        "linkedin": "https://www.linkedin.com/in/ayush-pratap-069845317",
+        "instagram": "https://www.instagram.com/ayuusshh01"
+      },
+      "graduation_year": "2nd year",
+      "status": "active",
+      "member_type": "member",
+      "summary": "ML developer working with Python and AI models, focusing on data-driven solutions and experimentation."
+    },
+
+    {
+      "profile_id": "anuraggupta",
+      "full_name": "Anurag Gupta",
+      "domain": "ML Developer",
+      "tags": [
+        "machine learning",
+        "python",
+        "ai",
+        "ml engineering",
+        "data science",
+        "model training",
+        "deep learning",
+        "analytics"
+      ],
+      "social": {
+        "github": "https://github.com/AnuragGupta181",
+        "linkedin": "https://www.linkedin.com/in/anurag-gupta-a54a17308",
+        "instagram": null
+      },
+      "graduation_year": "2nd year",
+      "status": "active",
+      "member_type": "member",
+      "summary": "second-year ML developer exploring data science, deep learning, and AI-based problem solving."
+    },
+
+    {
+      "profile_id": "dhanyasharma",
+      "full_name": "Dhanya Sharma",
+      "domain": "ML Developer",
+      "tags": [
+        "machine learning",
+        "python",
+        "data science",
+        "ai",
+        "analytics",
+        "model development",
+        "deep learning",
+        "research"
+      ],
+      "social": {
+        "github": "https://github.com/thedhanyasharma2486-sudo",
+        "linkedin": null,
+        "instagram": "https://www.instagram.com/dhanya12_24"
+      },
+      "graduation_year": "2nd year",
+      "status": "active",
+      "member_type": "member",
+      "summary": "ML developer passionate about analytics, model building, and AI research methodologies."
+    }
+  ]
+}
