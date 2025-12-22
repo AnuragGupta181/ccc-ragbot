@@ -412,7 +412,7 @@ from langchain_deepseek import ChatDeepSeek
 
 response_model =  ChatDeepSeek(
     model="nvidia/nemotron-3-nano-30b-a3b:free",
-    api_key="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",
+    api_key=os.getenv("OPENROUTER_API_KEY"),
     api_base="https://openrouter.ai/api/v1",
     extra_body={"reasoning": {"enabled": True}},
 )
@@ -453,7 +453,7 @@ class GradeDocuments(BaseModel):
 
 grader_model = ChatDeepSeek(
     model="google/gemini-2.5-flash-lite-preview-09-2025",
-    api_key="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",
+    api_key=os.getenv("OPENROUTER_API_KEY"),
     api_base="https://openrouter.ai/api/v1",
     extra_body={"reasoning": {"enabled": True}},
 )
@@ -593,7 +593,7 @@ class SuggestPrompt(BaseModel):
 
 grader_model = ChatDeepSeek(
     model="google/gemini-2.5-flash-lite-preview-09-2025",
-    api_key="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",
+    api_key=os.getenv("OPENROUTER_API_KEY"),
     api_base="https://openrouter.ai/api/v1",
     extra_body={"reasoning": {"enabled": True}},
 )
@@ -686,19 +686,23 @@ checkpointer = InMemorySaver()
 graph = workflow.compile(checkpointer=checkpointer)
 
 
-# config: RunnableConfig = {"configurable": {"thread_id": "1"}}
 
 # -----------------------------
 # RUNTIME CONFIG (ONE THREAD)
 # -----------------------------
-thread_id = str(uuid4())
-config: RunnableConfig = {
-    "configurable": {"thread_id": thread_id}
-}
+# config: RunnableConfig = {"configurable": {"thread_id": "1"}}
+
 
 
 #CLI
 if __name__ == "__main__":
+
+    thread_id = str(uuid4())
+    config: RunnableConfig = {
+        "configurable": {"thread_id": thread_id}
+    }
+    # config: RunnableConfig = {"configurable": {"thread_id": "1"}}
+
     print("🟢 CCC Chatbot started")
     print("Type 'q' or 'quit' to exit\n")
 
