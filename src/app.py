@@ -759,8 +759,8 @@ thread_id = str(uuid4())
 config: RunnableConfig = {
     "configurable": {"thread_id": thread_id}
 }
+from langchain_core.messages import HumanMessage
 
-#CLI
 if __name__ == "__main__":
 
     print("🟢 CCC Chatbot started")
@@ -778,16 +778,16 @@ if __name__ == "__main__":
                 "messages": [
                     HumanMessage(content=user_input)
                 ]
-            },config=config
+            },
+            config=config
         ):
             for node, update in chunk.items():
                 print(f"\n🔹 Update from node: {node}")
 
-                msg = update["messages"][-1]
-
-                if hasattr(msg, "pretty_print"):
-                    msg.pretty_print()
-                else:
-                    print(msg)
+                for msg in update["messages"]:
+                    if hasattr(msg, "pretty_print"):
+                        msg.pretty_print()
+                    else:
+                        print(msg)
 
         print("\n" + "-" * 60 + "\n")
