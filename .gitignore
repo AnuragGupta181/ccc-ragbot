@@ -14,3 +14,8 @@ chroma_langchain_db/
 chromadb/
 db.sqlite3
 chroma.sqlite3
+.langgraph_api/
+
+.vscode/
+.idea/
+.DS_Store

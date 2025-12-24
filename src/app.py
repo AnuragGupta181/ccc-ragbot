@@ -18,7 +18,8 @@ import json
 from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-with open("data.json", "r", encoding="utf-8") as f:
+FILE_Path = "src/public/data.json"
+with open(FILE_Path, "r", encoding="utf-8") as f:
     parsed_data = json.load(f)
 
 assert isinstance(parsed_data, dict), "parsed_data MUST be a dict"
@@ -407,6 +408,37 @@ from langchain_core.tools import create_retriever_tool
 
 # retrieve_members.invoke({"query": "anurag"})
 
+from langchain_core.messages import HumanMessage, AIMessage, ToolMessage
+
+def get_latest_user_question(messages):
+    for msg in reversed(messages):
+        if isinstance(msg, HumanMessage):
+            return msg.content
+    raise ValueError("No HumanMessage found")
+
+def get_latest_context_message(messages):
+    for msg in reversed(messages):
+        if isinstance(msg, ToolMessage):
+            return msg
+    for msg in reversed(messages):
+        if isinstance(msg, AIMessage):
+            return msg
+    raise ValueError("No context message found")
+
+def get_latest_context(messages):
+    for msg in reversed(messages):
+        if isinstance(msg, AIMessage):
+            return msg.content
+    raise ValueError("No context message found in state")
+
+
+def get_latest_user_message(messages):
+    for msg in reversed(messages):
+        if isinstance(msg, HumanMessage):
+            return msg
+    raise ValueError("No HumanMessage found")
+
+
 from langgraph.graph import MessagesState
 from langchain_deepseek import ChatDeepSeek
 
@@ -418,16 +450,30 @@ response_model =  ChatDeepSeek(
 )
 
 
+
 def generate_query_or_respond(state: MessagesState):
     """Call the model to generate a response based on the current state. Given
     the question, it will decide to retrieve using the retriever tool, or simply respond to the user.
     """
+    messages = state["messages"]
+
+    # ✅ Ensure last user message drives the decision
+    if not isinstance(messages[-1], HumanMessage):
+        # fallback: find most recent user message
+        for msg in reversed(messages):
+            if isinstance(msg, HumanMessage):
+                messages = messages + [msg]
+                break
+
     response = (
         response_model
         # highlight-next-line
-        .bind_tools(tools).invoke(state["messages"])
+        .bind_tools(tools)
+        .invoke(messages)
     )
+
     return {"messages": [response]}
+
 
 from pydantic import BaseModel, Field
 from typing import Literal
@@ -463,31 +509,28 @@ grader_model = ChatDeepSeek(
 def grade_documents(
     state: MessagesState,
 ) -> Literal["generate_answer", "rewrite_question"]:
-    """Determine whether the retrieved documents are relevant to the question."""
-    question = state["messages"][0].content
-    last_message = state["messages"][-1]
 
-    if isinstance(last_message, ToolMessage):
-        tool_name = last_message.name
+    messages = state["messages"]
 
-        if tool_name in { "web_search", "tavily_search", "get_weather", "code_executor"}:
-            return "generate_answer"
+    # ✅ MEMORY-SAFE extraction
+    question = get_latest_user_question(messages)
+    context = get_latest_context(messages)
 
-    context = last_message.content
-    prompt = GRADE_PROMPT.format(question=question, context=context)
+    prompt = GRADE_PROMPT.format(
+        question=question,
+        context=context
+    )
+
     response = (
         grader_model
-        # highlight-next-line
-        .with_structured_output(GradeDocuments).invoke(
-            [{"role": "user", "content": prompt}]
-        )
+        .with_structured_output(GradeDocuments)
+        .invoke([{"role": "user", "content": prompt}])
     )
-    score = response.binary_score
 
-    if score == "yes":
-        return "generate_answer"
-    else:
-        return "rewrite_question"
+    score = response.binary_score.strip().lower()
+
+    return "generate_answer" if score == "yes" else "rewrite_question"
+
 
 REWRITE_PROMPT = (
     "Look at the input and try to reason about the underlying semantic intent / meaning.\n"
@@ -498,24 +541,24 @@ REWRITE_PROMPT = (
     "Formulate an improved question:"
 )
 
-from langchain_core.messages import HumanMessage
 
 def rewrite_question(state: MessagesState):
+    """Rewrite the original user question."""
     messages = state["messages"]
-    question = messages[0].content
 
+    last_user_msg = get_latest_user_message(messages)
+    question = last_user_msg.content
+    
     prompt = REWRITE_PROMPT.format(question=question)
 
     response = response_model.invoke(
         [HumanMessage(content=prompt)]
     )
-
     return {
         "messages": [
             HumanMessage(content=response.content)
         ]
     }
-
 
 GENERATE_PROMPT = (
     "You are an assistant for question-answering tasks.\n\n"
@@ -550,29 +593,44 @@ RAG_TOOL_NAMES = [
 ]
 
 
-
 def generate_answer(state: MessagesState):
-    """Generate a final answer with tool-type awareness."""
-    question = state["messages"][0].content
-    last_message = state["messages"][-1]
+    """Generate a final answer with tool-type awareness (memory-safe)."""
 
-    # Default context
-    context = last_message.content
+    messages = state["messages"]
 
-    # Detect tool type
+    # ✅ Always latest user question
+    question = get_latest_user_question(messages)
+
+    # ✅ Context comes from tool or AI
+    context_msg = get_latest_context_message(messages)
+    context = context_msg.content
+
+    # ✅ Detect tool type
     tool_type = "none"
-    if isinstance(last_message, ToolMessage):
-        if last_message.name in RAG_TOOL_NAMES:
+    tool_name = None
+
+    if isinstance(context_msg, ToolMessage):
+        tool_name = context_msg.name
+        if context_msg.name in RAG_TOOL_NAMES:
             tool_type = "rag"
-        elif last_message.name in CUSTOM_TOOL_NAMES:
+        elif context_msg.name in CUSTOM_TOOL_NAMES:
             tool_type = "custom"
 
-    prompt = GENERATE_PROMPT.format(question=question, context=context)
-    response = response_model.invoke([{"role": "user", "content": prompt}])
+    prompt = GENERATE_PROMPT.format(
+        question=question,
+        context=context
+    )
+
+    response = response_model.invoke(
+        [HumanMessage(content=prompt)]
+    )
+
+    # ✅ Attach metadata safely
     response.metadata = {
         "tool_type": tool_type,
-        "tool_name": getattr(last_message, "name", None),
+        "tool_name": tool_name,
     }
+
     return {"messages": [response]}
 
 
@@ -650,31 +708,35 @@ from langchain_core.runnables import RunnableConfig
 workflow = StateGraph(MessagesState)
 
 # Define the nodes we will cycle between
-workflow.add_node(generate_query_or_respond)
-workflow.add_node("retrieve", ToolNode(tools))
-workflow.add_node(rewrite_question)
-workflow.add_node(generate_answer)
-# workflow.add_node(next_suggestions)
+workflow.add_node("generate_query_or_respond", generate_query_or_respond)
+workflow.add_node("all_tools", ToolNode(tools))
+workflow.add_node("rewrite_question", rewrite_question)
+workflow.add_node("generate_answer", generate_answer)
+# workflow.add_node("next_suggestions", next_suggestions)
 
 workflow.add_edge(START, "generate_query_or_respond")
 
 # Decide whether to retrieve
 workflow.add_conditional_edges(
     "generate_query_or_respond",
-    # Assess LLM decision (call `retriever_tool` tool or respond to the user)
+    # Assess LLM decision (call `all_tool` tool or respond to the user)
     tools_condition,
     {
         # Translate the condition outputs to nodes in our graph
-        "tools": "retrieve",
+        "tools": "all_tools",
         END: END,
     },
 )
 
 # Edges taken after the `action` node is called.
 workflow.add_conditional_edges(
-    "retrieve",
+    "all_tools",
     # Assess agent decision
     grade_documents,
+    # {
+    #     "yes": "generate_answer",
+    #     "no": "rewrite_question",
+    # }
 )
 workflow.add_edge("generate_answer", END)
 # workflow.add_edge("next_suggestions", END)
@@ -685,6 +747,7 @@ checkpointer = InMemorySaver()
 # Compile
 graph = workflow.compile(checkpointer=checkpointer)
 
+# graph = workflow.compile()
 
 
 # -----------------------------
@@ -692,16 +755,13 @@ graph = workflow.compile(checkpointer=checkpointer)
 # -----------------------------
 # config: RunnableConfig = {"configurable": {"thread_id": "1"}}
 
-
+thread_id = str(uuid4())
+config: RunnableConfig = {
+    "configurable": {"thread_id": thread_id}
+}
 
 #CLI
 if __name__ == "__main__":
-
-    thread_id = str(uuid4())
-    config: RunnableConfig = {
-        "configurable": {"thread_id": thread_id}
-    }
-    # config: RunnableConfig = {"configurable": {"thread_id": "1"}}
 
     print("🟢 CCC Chatbot started")
     print("Type 'q' or 'quit' to exit\n")
@@ -716,10 +776,7 @@ if __name__ == "__main__":
         for chunk in graph.stream(
             {
                 "messages": [
-                    {
-                        "role": "user",
-                        "content": user_input,
-                    }
+                    HumanMessage(content=user_input)
                 ]
             },config=config
         ):
