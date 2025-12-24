@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+
+# Environment & secrets
+.env
+
+# Editors / OS
+.vscode/
+.DS_Store
+
+# Git
+.git/
+.gitignore
+
+# LangChain / Vector DB (rebuilt each run)
+chroma_langchain_db/
+
+# Local tooling
+uv.lock
+.python-version
+
+# Docs & misc
+README.md
