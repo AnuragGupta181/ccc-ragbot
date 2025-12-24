@@ -1,3 +1,5 @@
+# uvicorn src.server:app --host 0.0.0.0 --port 8000 --reload
+
 import uuid
 from typing import Optional, Generator
 
@@ -9,8 +11,9 @@ from pydantic import BaseModel
 from langchain_core.messages import HumanMessage, AIMessage, ToolMessage
 from langgraph.graph import MessagesState
 
+
 # 🔹 IMPORT YOUR GRAPH
-from app import graph   # <-- adjust import if needed
+from src.app import graph   # <-- adjust import if needed
 
 
 # =========================
@@ -46,6 +49,15 @@ class ChatResponse(BaseModel):
     thread_id: str
     tool_type: str | None = None
     tool_name: str | None = None
+
+class SuggestRequest(BaseModel):
+    final_answer: str | None = None
+    thread_id: str | None = None
+
+
+class SuggestResponse(BaseModel):
+    suggestions: list[str]
+    thread_id: str | None = None
 
 
 # =========================
@@ -154,6 +166,88 @@ def chat_stream(request: ChatRequest):
     return StreamingResponse(
         event_stream(),
         media_type="text/event-stream"
+    )
+
+SUGGESTION_PROMPT = """
+You are an assistant that generates follow-up query suggestions.
+
+Rules:
+- Use the provided final answer.
+- If the final answer contains a question, generate possible answers to that question.
+- If the final answer is neutral, suggest queries related to Cloud Computing Cell (CCC) and related to the neutral answer.
+- Generate between 2 and 3 suggestions.
+- Each suggestion must contain 3 to 6 words.
+- Do NOT number the suggestions.
+- Do NOT use bullets.
+
+Final Answer:
+{final_answer}
+"""
+
+from langchain_core.messages import AIMessage
+
+def get_last_ai_answer(messages):
+    for msg in reversed(messages):
+        if isinstance(msg, AIMessage):
+            return msg.content
+    return None
+
+from langchain_deepseek import ChatDeepSeek
+import os
+response_model = ChatDeepSeek(
+    model="google/gemini-2.5-flash-lite-preview-09-2025",
+    api_key=os.getenv("OPENROUTER_API_KEY"),
+    api_base="https://openrouter.ai/api/v1",
+    extra_body={"reasoning": {"enabled": True}},
+)
+
+
+@app.post("/suggest", response_model=SuggestResponse)
+def suggest(request: SuggestRequest):
+
+    # 🔹 Decide source of final answer
+    final_answer = request.final_answer
+
+    if not final_answer:
+        if not request.thread_id:
+            return SuggestResponse(
+                suggestions=[],
+                thread_id=None
+            )
+
+        config = {
+            "configurable": {
+                "thread_id": request.thread_id
+            }
+        }
+
+        # Load memory from graph
+        state = graph.get_state(config)
+        final_answer = get_last_ai_answer(state["messages"])
+
+        if not final_answer:
+            return SuggestResponse(
+                suggestions=[],
+                thread_id=request.thread_id
+            )
+
+    # 🔹 Generate suggestions
+    prompt = SUGGESTION_PROMPT.format(final_answer=final_answer)
+
+    response = response_model.invoke(
+        [{"role": "user", "content": prompt}]
+    )
+
+    # 🔹 Parse suggestions (one per line)
+    suggestions = [
+        line.strip("-• ").strip()
+        for line in response.content.split("\n")
+        if line.strip()
+    ]
+
+    return SuggestResponse(
+        suggestions=suggestions,
+        thread_id=request.thread_id
     )
 
 
