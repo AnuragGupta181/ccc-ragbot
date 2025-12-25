@@ -116,12 +116,16 @@ from langchain_core.vectorstores import InMemoryVectorStore
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
 
-embedding = HuggingFaceEmbeddings()
+embeddings = HuggingFaceEmbeddings()
+# embeddings = NVIDIAEmbeddings(
+#     api_key=os.getenv("NVIDIA_API_KEY"),
+#     model="NV-Embed-QA",
+# )
 persist_dir = "./chroma_langchain_db"
 
 vectorstore = Chroma(
     collection_name="ccc_data_collection",
-    embedding_function=embedding,
+    embedding_function=embeddings,
     persist_directory=persist_dir,
 )
 

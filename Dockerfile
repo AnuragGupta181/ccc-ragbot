@@ -35,8 +35,6 @@ RUN pip install --no-cache-dir --upgrade pip \
 # Copy application code
 # ----------------------------
 COPY src ./src
-COPY langgraph.json .
-COPY README.md .
 
 # ----------------------------
 # Expose port
