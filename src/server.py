@@ -257,6 +257,8 @@ def suggest(request: SuggestRequest):
 @app.get("/health")
 def health():
     return {"status": "ok", "code": 200, "message": "CCC Chatbot API is healthy."}
+
+
 @app.get("/")
 def root():
     return {
@@ -286,6 +288,14 @@ def root():
                 "method": "POST",
                 "type": "SSE (Streaming)",
                 "purpose": "Streams node-by-node execution and responses (debug/developer mode)"
+            },
+            "/suggest": {
+                "method": "POST",
+                "purpose": "Generates follow-up query suggestions based on the final answer",
+                "body": {
+                    "final_answer": "string (optional, if not provided, uses last AI answer from thread)",
+                    "thread_id": "string (optional, used to fetch last AI answer)"
+                }
             },
             "/health": {
                 "method": "GET",
