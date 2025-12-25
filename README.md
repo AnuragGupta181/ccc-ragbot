@@ -129,7 +129,7 @@ uv add -r requirements.txt
 
 ---
 
-## 🚢 Deployment Guide
+## 🚢 Deployment Guide (Docker)
 
 ### 1️⃣ Generate `requirements.txt`
 
@@ -180,9 +180,106 @@ docker push anurag181/ccc-ragbot:v1
 
 ---
 
+## ☁️ Deployment on AWS EC2 (Production)
+
+### 1️⃣ Create an EC2 Instance
+
+* OS: **Ubuntu 22.04 LTS**
+* Instance type: `t2.micro` or higher
+* Allow **SSH (22)** during setup
+* Attach a key pair
+
+---
+
+### 2️⃣ Connect to EC2
+
+```bash
+ssh -i your-key.pem ubuntu@<EC2_PUBLIC_IP>
+```
+
+---
+
+### 3️⃣ Install Docker
+
+```bash
+sudo apt-get update
+sudo apt-get install -y docker.io
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo usermod -aG docker $USER
+exit
+```
+
+➡️ Reconnect after logout.
+
+---
+
+### 4️⃣ Pull Docker Image
+
+```bash
+docker pull anurag181/ccc-ragbot:v4
+```
+
+---
+
+### 5️⃣ Create `.env` File
+
+```bash
+nano .env
+```
+
+Paste environment variables and save (`Ctrl+O`, Enter, `Ctrl+X`).
+
+Verify:
+
+```bash
+ls -la .env
+cat .env
+```
+
+---
+
+### 6️⃣ Run Container
+
+```bash
+docker run -d \
+  -p 8000:8000 \
+  --env-file .env \
+  --name ccc-ragbot \
+  anurag181/ccc-ragbot:v4
+```
+
+---
+
+### 7️⃣ Verify
+
+```bash
+docker ps
+docker logs ccc-ragbot
+```
+
+---
+
+### 8️⃣ Update Security Group
+
+Add inbound rule:
+
+| Type       | Protocol | Port | Source    |
+| ---------- | -------- | ---- | --------- |
+| Custom TCP | TCP      | 8000 | 0.0.0.0/0 |
+
+---
+
+### 🔗 Access
+
+* `http://<EC2_PUBLIC_IP>:8000/docs`
+* `http://<EC2_PUBLIC_IP>:8000/health`
+
+---
+
 ## ✅ Status
 
-Production-ready, scalable, and optimized for both **frontend usage** and **developer observability**.
+Production-ready, scalable, and suitable for frontend + developer workflows.
 
 ---
 
