@@ -12,6 +12,7 @@ dependencies = [
     "langchain-community>=0.4.1",
     "langchain-core>=1.2.4",
     "langchain-deepseek>=1.0.1",
+    "langchain-google-genai>=4.1.2",
     "langchain-nvidia-ai-endpoints>=1.0.0",
     "langchain-tavily>=0.2.15",
     "langchain-text-splitters>=1.1.0",
@@ -19,6 +20,5 @@ dependencies = [
     "langsmith>=0.5.0",
     "pyowm>=3.5.0",
     "python-dotenv>=1.2.1",
-    "sentence-transformers>=5.2.0",
     "uvicorn>=0.40.0",
 ]

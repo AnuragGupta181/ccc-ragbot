@@ -115,8 +115,13 @@ for section_name, config in SECTION_CONFIG.items():
 from langchain_core.vectorstores import InMemoryVectorStore
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
+from langchain_google_genai import GoogleGenerativeAIEmbeddings
 
-embeddings = HuggingFaceEmbeddings()
+# embeddings = HuggingFaceEmbeddings()
+embeddings = GoogleGenerativeAIEmbeddings(
+    model="models/gemini-embedding-001",
+    google_api_key=os.getenv("GOOGLE_API_KEY"),
+)
 # embeddings = NVIDIAEmbeddings(
 #     api_key=os.getenv("NVIDIA_API_KEY"),
 #     model="NV-Embed-QA",
@@ -140,7 +145,7 @@ else:
     print("✅ Vector store already populated. Skipping ingestion.")
 
 # results = vector_store.similarity_search(
-#     "tukur",
+#     "tukur",7
 #     k=5, # Increase k to retrieve more potential documents before filtering
 #     filter={
 #         "source": {"$in": ["alumni","fourth_year_members","third_year_members","second_year_members"]}
@@ -795,3 +800,5 @@ if __name__ == "__main__":
                         print(msg)
 
         print("\n" + "-" * 60 + "\n")
+
+
