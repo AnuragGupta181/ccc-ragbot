@@ -113,19 +113,14 @@ for section_name, config in SECTION_CONFIG.items():
 # Add Vector store
 # vectorstore = InMemoryVectorStore(embedding=HuggingFaceEmbeddings())
 from langchain_core.vectorstores import InMemoryVectorStore
-from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 
-# embeddings = HuggingFaceEmbeddings()
 embeddings = GoogleGenerativeAIEmbeddings(
     model="models/gemini-embedding-001",
     google_api_key=os.getenv("GOOGLE_API_KEY"),
 )
-# embeddings = NVIDIAEmbeddings(
-#     api_key=os.getenv("NVIDIA_API_KEY"),
-#     model="NV-Embed-QA",
-# )
+
 persist_dir = "./chroma_langchain_db"
 
 vectorstore = Chroma(

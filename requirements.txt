@@ -29,6 +29,8 @@ backoff==2.2.1
     # via posthog
 bcrypt==5.0.0
     # via chromadb
+brotli==1.2.0
+    # via httpx
 build==1.3.0
     # via chromadb
 cachetools==6.2.4
@@ -45,6 +47,7 @@ chromadb==1.3.7
     # via langchain-chroma
 click==8.3.1
     # via
+    #   ddgs
     #   duckduckgo-search
     #   typer
     #   uvicorn
@@ -58,6 +61,8 @@ coloredlogs==15.0.1
     # via onnxruntime
 dataclasses-json==0.6.7
     # via langchain-community
+ddgs==9.10.0
+    # via ccc-register (pyproject.toml)
 distro==1.9.0
     # via
     #   google-genai
@@ -67,6 +72,8 @@ duckduckgo-search==8.1.1
     # via ccc-register (pyproject.toml)
 durationpy==0.10
     # via kubernetes
+fake-useragent==2.2.0
+    # via ddgs
 fastapi==0.127.0
     # via ccc-register (pyproject.toml)
 filelock==3.20.1
@@ -103,6 +110,10 @@ h11==0.16.0
     # via
     #   httpcore
     #   uvicorn
+h2==4.3.0
+    # via httpx
+hpack==4.1.0
+    # via h2
 httpcore==1.0.9
     # via httpx
 httptools==0.7.1
@@ -110,6 +121,7 @@ httptools==0.7.1
 httpx==0.28.1
     # via
     #   chromadb
+    #   ddgs
     #   google-genai
     #   langgraph-sdk
     #   langsmith
@@ -120,6 +132,8 @@ huggingface-hub==0.36.0
     # via tokenizers
 humanfriendly==10.0
     # via coloredlogs
+hyperframe==6.1.0
+    # via h2
 idna==3.11
     # via
     #   anyio
@@ -201,7 +215,9 @@ langsmith==0.5.0
     #   langchain-community
     #   langchain-core
 lxml==6.0.2
-    # via duckduckgo-search
+    # via
+    #   ddgs
+    #   duckduckgo-search
 markdown-it-py==4.0.0
     # via rich
 marshmallow==3.26.2
@@ -270,7 +286,9 @@ packaging==25.0
 posthog==5.4.0
     # via chromadb
 primp==0.15.0
-    # via duckduckgo-search
+    # via
+    #   ddgs
+    #   duckduckgo-search
 propcache==0.4.1
     # via
     #   aiohttp
@@ -383,6 +401,8 @@ sniffio==1.3.1
     # via
     #   google-genai
     #   openai
+socksio==1.0.0
+    # via httpx
 sqlalchemy==2.0.45
     # via
     #   langchain-classic
