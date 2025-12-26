@@ -40,24 +40,24 @@ app.add_middleware(
 # Request / Response Models
 # =========================
 class ChatRequest(BaseModel):
-    query: str
-    thread_id: Optional[str] = None
+    query: str = "How can I join Cloud Computing Cell?"
+    thread_id: Optional[str] = "test-thread-123"
 
 
 class ChatResponse(BaseModel):
-    answer: str
-    thread_id: str
-    tool_type: str | None = None
-    tool_name: str | None = None
+    answer: str = "Sample answer"
+    thread_id: str = "test-thread-123"
+    tool_type: str | None = "tool_type_example"
+    tool_name: str | None = "tool_name_example"
 
 class SuggestRequest(BaseModel):
-    final_answer: str | None = None
-    thread_id: str | None = None
+    final_answer: str | None = "Give me the answer in Yes or No."
+    thread_id: str | None = "test-thread-123"
 
 
 class SuggestResponse(BaseModel):
-    suggestions: list[str]
-    thread_id: str | None = None
+    suggestions: list[str] = ["Yes", "No"]
+    thread_id: str | None = "test-thread-123"
 
 
 # =========================
@@ -100,7 +100,8 @@ def chat(request: ChatRequest):
         {
             "messages": [
                 HumanMessage(content=request.query)
-            ]
+            ],
+            "rewrite_count": 0,
         },
         config=config
     )
@@ -141,7 +142,8 @@ def chat_stream(request: ChatRequest):
             {
                 "messages": [
                     HumanMessage(content=request.query)
-                ]
+                ],
+                "rewrite_count": 0,
             },
             config=config
         ):

@@ -110,7 +110,7 @@ if user_input:
     # LangGraph Streaming
     # -------------------------
     for chunk in graph.stream(
-        {"messages": [HumanMessage(content=user_input)]},
+        {"messages": [HumanMessage(content=user_input)],"rewrite_count": 0},
         config=config,
     ):
         for node_name, update in chunk.items():
