@@ -6,13 +6,29 @@ Welcome to the **CCC Chatbot API**, an intelligent conversational backend built 
 
 This API powers the CCC Intelligent Chatbot and supports:
 
-* Multi-turn conversations with memory (checkpointer)
+* Multi-turn conversations with persistent memory (checkpointer)
 * Retrieval-Augmented Generation (RAG)
-* Web search and custom tools
-* Automatic query rewriting
-* Context relevance grading
-* Tool routing and fallback handling
+* Web search and custom tool execution
+* Automatic query rewriting and intent clarification
+* Context relevance grading before answering
+* Tool routing with graceful fallbacks
 * Real-time streaming for debugging and observability
+
+---
+
+## 🧭 How the Graph Works
+
+The chatbot is orchestrated using a LangGraph-based execution flow. Each user query passes through multiple intelligent nodes such as:
+
+* **Query Rewriting** – Improves unclear or incomplete questions
+* **Relevance Grading** – Determines whether context is sufficient
+* **Tool Selection** – Routes the query to RAG, web, or custom tools
+* **Answer Generation** – Produces a grounded, concise response
+* **Suggestion Generation** – Proposes follow-up questions
+
+> 📌 **Visual Flow**
+
+![CCC Chatbot Graph](src/public/chart.png)
 
 ---
 
@@ -20,7 +36,7 @@ This API powers the CCC Intelligent Chatbot and supports:
 
 ### 🔹 `GET /docs`
 
-Interactive API documentation (Swagger UI).
+Interactive API documentation powered by Swagger UI.
 
 ---
 
@@ -38,12 +54,23 @@ Interactive API documentation (Swagger UI).
 }
 ```
 
+**Response:**
+
+* Final AI-generated answer
+* `thread_id` for continuing the conversation
+
 ---
 
 ### 🔹 `POST /chat/stream`
 
 **Type:** SSE (Server-Sent Events)
-**Purpose:** Streams node-by-node execution and responses (developer/debug mode)
+**Purpose:** Streams node-by-node execution and partial responses (developer/debug mode)
+
+**Use cases:**
+
+* Observing LangGraph node execution
+* Debugging tool routing decisions
+* Building real-time UIs
 
 ---
 
@@ -64,18 +91,18 @@ Interactive API documentation (Swagger UI).
 
 ### 🔹 `GET /health`
 
-Health check endpoint for monitoring and deployment.
+Health check endpoint for monitoring, orchestration, and deployments.
 
 ---
 
 ## 🧠 Chatbot Capabilities
 
 * Multi-turn conversational memory
-* Automatic question rewriting for unclear queries
+* Automatic question rewriting for ambiguous queries
 * Context relevance grading before answering
-* Tool-aware reasoning (RAG, web, code, custom tools)
-* Fallback handling when information is unavailable
-* Streaming and non-streaming responses
+* Tool-aware reasoning (RAG, web, code, and domain tools)
+* Graceful fallback handling when information is unavailable
+* Streaming and non-streaming response modes
 
 ---
 
@@ -116,8 +143,6 @@ uv pip install -r requirements.txt
 uv add -r requirements.txt
 ```
 
----
-
 ### Useful `uv` Commands
 
 * `uv venv` – Create a virtual environment
@@ -126,6 +151,21 @@ uv add -r requirements.txt
 * `uv sync` – Install dependencies from lock file
 * `uv pip compile` – Compile dependencies into a lock file
 * `uv pip freeze` – Generate a requirements file
+
+---
+
+## 🧪 Local Deployment
+
+Run the server locally from the project root:
+
+```bash
+uvicorn src.server:app
+```
+
+Access:
+
+* [http://localhost:8000/docs](http://localhost:8000/docs)
+* [http://localhost:8000/health](http://localhost:8000/health)
 
 ---
 
@@ -279,7 +319,7 @@ Add inbound rule:
 
 ## ✅ Status
 
-Production-ready, scalable, and suitable for frontend + developer workflows.
+Production-ready, scalable, and suitable for both frontend integrations and developer debugging workflows.
 
 ---
 
