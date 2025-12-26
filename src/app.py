@@ -331,7 +331,23 @@ from langchain.tools import tool
 
 @tool
 def web_search(query: str) -> str:
-    """Use this tool to search the web for recent information."""
+    """
+    Tool: Web Search
+
+    Use this tool ONLY when the user query requires up-to-date or real-time
+    information that is NOT available in CCC's internal data.
+
+    ❌ Do NOT use for:
+    - CCC-related questions
+    - CCC members, domains, events, FAQs, or faculty
+    - Questions answerable from internal RAG data
+
+    ✅ Use for:
+    - Current news
+    - Live events
+    - Recent announcements
+    - External factual updates
+    """
     try:
         result = search.invoke(query)
         return result if isinstance(result, str) else str(result)
@@ -355,7 +371,24 @@ from langchain_tavily import TavilySearch
 
 @tool
 def tavily_search(query: str) -> str:
-    """Search the web using Tavily for recent and reliable information."""
+    """
+    Tool: Tavily Web Search
+
+    Use this tool ONLY when the user's question requires:
+    - Recent or real-time information
+    - External knowledge not present in CCC internal data
+
+    ❌ Do NOT use for:
+    - CCC-related questions
+    - CCC members, domains, events, FAQs, or faculty
+    - Questions answerable via internal RAG tools
+
+    ✅ Use for:
+    - Current news
+    - Live events
+    - Recent announcements
+    - External factual updates
+    """
     tool = TavilySearch(
     max_results=5,
     topic="general",
