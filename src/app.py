@@ -604,7 +604,6 @@ GENERATE_PROMPT = (
     "- If the context comes from a custom tool (web, weather, code execution, tavily), "
     "summarize the tool output clearly.\n"
     "- If the context is insufficient, say you don't know.\n\n"
-    "Use a maximum of three concise sentences.\n\n"
     "Question:\n{question}\n\n"
     "Context:\n{context}"
 )
